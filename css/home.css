@@ -32,7 +32,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 50px;
+    margin: 3rem;
 }
 
 nav section {
@@ -119,21 +119,6 @@ span::after {
     transform: translateX(100%);
 }
 
-/* li {
-    padding: 10px 20px;
-    position: relative;
-}
-
-li a, li a:visited {
-    text-decoration: none;
-    color: var(--LIGHTEST);
-}
-
-li a:hover {
-    color: var(--BLUE);
-    background-color: var(--LIGHTEST);
-    border-radius: 1000px;
-} */
 
 .contact-me a, .contact-me a:visited, .contact-me a:hover {
     text-decoration: none;
@@ -146,10 +131,12 @@ h1 {
     display: flex;
     justify-content: center;
     color: var(--DARKEST);
+    font-size: clamp(2rem, 8vw, 5rem);
 }
 
 section#projects {
     width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,6 +146,8 @@ section#projects {
 }
 
 section#projects img {
+    width: 50vw;
+    height: auto;
     cursor: pointer;
     border-radius: 30px;
     box-shadow: 0px 10px 15px var(--DARKEST);
@@ -171,3 +160,4 @@ section#projects img:hover {
     transform: scale(1.05);
     transition: transform 0.1s ease;    
 }
+
