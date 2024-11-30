@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Geologica:wght@100..900&family=Questrial&family=Roboto&display=swap');
+
+/* Variables */
+:root {
+    /* COLORS */
+    --LIGHTEST: #FCFAFA;
+    --LIGHT: #C8D3D5;
+    --DARK: #A4B8C4;
+    --DARKEST: #6E8387;
+    --BLUE: #167d9d;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 1.5rem;
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--DARKEST);
+    background-color: var(--LIGHTEST);
+    height: 100%;
+}
+
+/* STYLE FOR HOME BUTTON ----- START */
+nav div {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+nav div:hover {
+    filter: invert(92%) sepia(5%) saturate(1608%) hue-rotate(173deg) brightness(82%) contrast(85%);
+}
+
+nav div img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    /* FILTER NEEDED TO CHANGE THE COLOR OF THE LOGO.png */
+    filter: invert(48%) sepia(8%) saturate(702%) hue-rotate(142deg) brightness(102%) contrast(81%);
+}
+
+/* STYLE FOR HOME BUTTON ----- END */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--LIGHT);
+    padding: 1.5rem 1.5rem;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 100%;
+    font-size: 1rem;
+    justify-content: space-between;
+}
+
+form .field-container {
+    width: calc(100% / 2 - 20px);
+}
+
+form .field-container label {
+    font-weight: bolder;
+
+}
+
+form .field-container input {
+    margin-top: 10px;
+    height: 45px;
+    width: 100%
+}

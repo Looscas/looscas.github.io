@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Geologica:wght@100..900&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", serif;
+    font-size: 2rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );
+}
+
+/* STYLE FOR HOME BUTTON ----- START */
+nav div {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+nav div:hover {
+    filter: invert(92%) sepia(5%) saturate(1608%) hue-rotate(173deg) brightness(82%) contrast(85%);
+}
+
+nav div img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    /* FILTER NEEDED TO CHANGE THE COLOR OF THE LOGO.png */
+    filter: invert(48%) sepia(8%) saturate(702%) hue-rotate(142deg) brightness(102%) contrast(81%);
+}
+
+/* STYLE FOR HOME BUTTON ----- END */
+
+h1 {
+    text-transform: uppercase; 
+    font-size: 2rem;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+input, form button {
+    font-size: inherit;
+    max-width: 700px;
+    border-radius: 1000px;
+}
+
+input {
+    padding-left: 0.5rem;
+}
+
+form button {
+    padding: 0 10px 0 10px;
+    background-color: lightgreen;
+    font-weight: bold;
+}
+
+ul {
+    display: flex;
+    flex-flow: column wrap;
+    align-items:flex-start;
+    list-style: none;
+    padding-top: 5%;
+    padding-left: 33%;
+/*     border: 2px solid red; */
+    width: 100%;
+}
+
+.delete {
+    font-size: 0.8em;
+    background-color: red;
+    color: whitesmoke;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
+    line-height: 8px;
+    font-weight: bold;
+    content: "X";
+}

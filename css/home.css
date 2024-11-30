@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Geologica:wght@100..900&family=Questrial&family=Roboto&display=swap');
+
+/* Variables */
+:root {
+    /* COLORS */
+    --LIGHTEST: #FCFAFA;
+    --LIGHT: #C8D3D5;
+    --DARK: #A4B8C4;
+    --DARKEST: #6E8387;
+    --BLUE: #167d9d;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 1.5rem;
+    font-family: "Questrial", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--DARKEST);
+    background-color: var(--LIGHTEST);
+    height: 100%;
+}
+
+nav {
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px;
+}
+
+nav section {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    /* Hacky way to center it to the middle of the page */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    padding: 10px;
+    background-color: var(--DARKEST);
+    border-radius: 1000px;
+}
+
+nav div {
+    height: 100%;
+}
+
+nav div:hover {
+    height: 100%;
+    filter: invert(92%) sepia(5%) saturate(1608%) hue-rotate(173deg) brightness(82%) contrast(85%);
+}
+
+nav div img {
+    display: block;
+    height: 100%;
+    /* FILTER NEEDED TO CHANGE THE COLOR OF THE LOGO.png */
+    filter: invert(48%) sepia(8%) saturate(702%) hue-rotate(142deg) brightness(102%) contrast(81%);
+}
+
+
+
+nav section ul {
+    background-color: var(--DARKEST);
+    color: var(--LIGHTEST);
+    border-radius: 1000px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    position: relative;
+    padding: 10px 20px;
+    z-index: 1;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: var(--LIGHTEST);
+    transition: color 0.3s ease;
+}
+
+.nav-item.active a {
+    color: var(--DARKEST);
+}
+
+span::after {
+    background-color: var(--LIGHT);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    border-radius: 1000px;
+    z-index: 0;
+    transition: transform 0.3s ease;
+
+/*     border: 2px solid red; */
+}
+
+.nav-item:nth-child(1):hover ~ span::after {
+    transform: translateX(0);
+}
+
+.nav-item:nth-child(2):hover ~ span::after {
+    transform: translateX(100%);
+}
+
+/* li {
+    padding: 10px 20px;
+    position: relative;
+}
+
+li a, li a:visited {
+    text-decoration: none;
+    color: var(--LIGHTEST);
+}
+
+li a:hover {
+    color: var(--BLUE);
+    background-color: var(--LIGHTEST);
+    border-radius: 1000px;
+} */
+
+.contact-me a, .contact-me a:visited, .contact-me a:hover {
+    text-decoration: none;
+    color: var(--DARKEST);
+}
+
+/* Projects */
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: var(--DARKEST);
+}
+
+section#projects {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 2rem;
+    background-color: var(--DARK);
+}
+
+section#projects img {
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 0px 10px 15px var(--DARKEST);
+
+    transform: scale(1);
+    transition: transform 0.1s ease;
+}
+
+section#projects img:hover {
+    transform: scale(1.05);
+    transition: transform 0.1s ease;    
+}
