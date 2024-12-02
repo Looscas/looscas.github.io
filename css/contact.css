@@ -17,7 +17,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     font-size: 1.5rem;
     font-family: "Questrial", sans-serif;
     font-weight: 400;
@@ -67,19 +68,55 @@ form {
     width: 100%;
     font-size: 1rem;
     justify-content: space-between;
+    height: 55vh;
+    position: relative;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 3vw, 3rem);
 }
 
 form .field-container {
-    width: calc(100% / 2 - 20px);
+    width: calc(100% / 2 - 10px);
 }
 
 form .field-container label {
-    font-weight: bolder;
-
+    font-weight: bold;
 }
 
 form .field-container input {
     margin-top: 10px;
     height: 45px;
-    width: 100%
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form div .message {
+    margin-top: 10px;
+    width: 206%;
+    height: 30vh;
+}
+
+.resetBtn {
+    position: absolute;
+    bottom: 20px;
+    width: 5rem;
+    height: 1rem;
+    background-color: lightcoral;
+    color: var(--LIGHTEST);
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.submitBtn {
+    position: absolute;
+    bottom: 20px;
+    right: 1.5rem;
+    width: 5rem;
+    height: 1rem;
+    background-color: lightgreen;
+    color: var(--DARKEST);
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
