@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Geologica:wght@100..900&family=Questrial&family=Roboto&display=swap');
+
+/* Variables */
+:root {
+    /* COLORS */
+    --LIGHTEST: #FCFAFA;
+    --LIGHT: #C8D3D5;
+    --DARK: #A4B8C4;
+    --DARKEST: #6E8387;
+    --BLUE: #167d9d;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 1.5rem;
+    font-family: "Questrial", sans-serif;
+    color: var(--DARKEST);
+    background-color: var(--LIGHTEST);
+}
+
+/* STYLE FOR HOME BUTTON ----- START */
+nav div {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+nav div:hover {
+    filter: invert(92%) sepia(5%) saturate(1608%) hue-rotate(173deg) brightness(82%) contrast(85%);
+}
+
+nav div img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    /* FILTER NEEDED TO CHANGE THE COLOR OF THE LOGO.png */
+    filter: invert(48%) sepia(8%) saturate(702%) hue-rotate(142deg) brightness(102%) contrast(81%);
+}
+
+/* STYLE FOR HOME BUTTON ----- END */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    height: 100vh;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    background-color: #010101;
+    margin-top: 10vh;
+    position: relative;
+    padding-bottom: 2vh;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: #010101;
+    filter: drop-shadow(0 -0.1em 0 #2d2d2f);
+    padding-top: 0.5rem;
+}
+
+#inputField {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    font-size: 3.3rem;
+    text-align: end;
+    color: #4dd906;
+    background-color: #010101;
+    border: none;
+}
+
+.characterBtn {
+    width: 9vh;
+    height: 9vh;
+    border-radius: 1000px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--LIGHTEST);
+    background-color: #171719;
+    border: none;
+}
+
+.characterBtn:hover {
+    background-color: hsl(240, 4%, 20%);
+}
+
+.characterBtn:active {
+    background-color: hsl(240, 4%, 40%);
+    font-size: 1.2rem;
+}
+
+.characterBtn#clearBtn, .characterBtn#backspaceBtn {
+    color: rgb(212, 31, 31);
+}
+
+.characterBtn#backspaceBtn {
+    grid-column: 2 / span 2;
+    grid-row-start: 1;
+    width: 18vh;
+}
+
+.characterBtn.operator {
+    font-size: 2rem;
+    color: #4dd906;
+}
+
+.characterBtn#calculateBtn {
+    font-size: 2rem;
+    color: var(--LIGHTEST);
+    background-color: #318607;
+    grid-column: 3 / span 2;
+    grid-row-start: 5;
+    width: 18vh;
+}
+
+@media screen and (max-width: 460px) {
+    body {
+        padding-top: 100px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    #inputField {
+        font-size: 2.4rem;
+    }
+}

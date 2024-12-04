@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/calculator.css">
+    <script defer src="js/calculator.js"></script>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <a href="/"><img src="img/Logo LC.png" width="50px" height="50px" alt="LC Logo"></a>
+        </div>
+    </nav>
+    <h1>Calculator</h1>
+    <div class="container">
+        <input type="text" name="text" id="inputField" readonly maxlength="11">
+        <div class="calculator">
+            <button class="characterBtn" id="clearBtn">C</button>
+            <button class="characterBtn" id="backspaceBtn">&vltri;</button>
+            <button class="characterBtn  operator" onclick="addCharacter('/')">&divide;</button>
+
+            <button class="characterBtn" onclick="addCharacter('7')">7</button>
+            <button class="characterBtn" onclick="addCharacter('8')">8</button>
+            <button class="characterBtn" onclick="addCharacter('9')">9</button>
+            <button class="characterBtn operator" onclick="addCharacter('*')">&times;</button>
+
+            <button class="characterBtn" onclick="addCharacter('4')">4</button>
+            <button class="characterBtn" onclick="addCharacter('5')">5</button>
+            <button class="characterBtn" onclick="addCharacter('6')">6</button>
+            <button class="characterBtn operator" onclick="addCharacter('-')">&minus;</button>
+
+            <button class="characterBtn" onclick="addCharacter('1')">1</button>
+            <button class="characterBtn" onclick="addCharacter('2')">2</button>
+            <button class="characterBtn" onclick="addCharacter('3')">3</button>
+            <button class="characterBtn operator" onclick="addCharacter('+')">&plus;</button>
+
+            <button class="characterBtn" onclick="addCharacter('.')">.</button>
+            <button class="characterBtn" onclick="addCharacter('0')">0</button>
+            <button class="characterBtn" id="calculateBtn">&equals;</button>
+        </div>
+    </div>
+</body>
+
+</html>
