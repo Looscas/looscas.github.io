@@ -147,7 +147,7 @@ section#projects {
 }
 
 section#projects img {
-    width: auto;
+    width: 350px;
     height: auto;
     cursor: pointer;
     border-radius: 30px;

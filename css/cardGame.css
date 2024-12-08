@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Geologica:wght@100..900&family=Questrial&family=Roboto&display=swap');
+
+/* Variables */
+:root {
+    /* COLORS */
+    --LIGHTEST: #FCFAFA;
+    --LIGHT: #C8D3D5;
+    --DARK: #A4B8C4;
+    --DARKEST: #6E8387;
+    --BLUE: #167d9d;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 1.5rem;
+    font-family: "Questrial", sans-serif;
+    color: var(--DARKEST);
+    background-color: var(--LIGHTEST);
+}
+
+/* STYLE FOR HOME BUTTON ----- START */
+nav div {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+nav div:hover {
+    filter: invert(92%) sepia(5%) saturate(1608%) hue-rotate(173deg) brightness(82%) contrast(85%);
+}
+
+nav div img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    /* FILTER NEEDED TO CHANGE THE COLOR OF THE LOGO.png */
+    filter: invert(48%) sepia(8%) saturate(702%) hue-rotate(142deg) brightness(102%) contrast(81%);
+}
+
+/* STYLE FOR HOME BUTTON ----- END */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    height: 100vh;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+.infoPanel {
+    width: 300px;
+    font-size: 0.7em;
+    text-align: left;
+}
+
+#newDeck, #drawCard {
+    background-image: url("https://www.deckofcardsapi.com/static/img/back.png");
+    background-size: cover;
+    background-position: center;
+    border: none;
+    width: 100px;
+    height: 140px;
+    cursor: pointer;
+
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 2px black;
+}
+#newDeck:hover, #drawCard:hover {
+    filter: brightness(90%);
+}
+
+.playerArea {
+    display: flex;
+    justify-content: center;
+}
+
+.playerHand {
+    margin: 50px 0;
+    background-color: var(--BLUE);
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    width: 340px;
+    height: 160px;
+}
+
+.card {
+    display: block;
+    width: 100px;
+}
+
+.card:hover {
+    filter: brightness(90%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 460px) {
+    body {
+        padding-top: 100px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
