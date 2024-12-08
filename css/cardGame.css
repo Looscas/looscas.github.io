@@ -66,6 +66,63 @@ h1 {
     text-align: left;
 }
 
+#cpuHealth, #playerHealth {
+    height: 40px;
+    border-radius: 15px;
+}
+
+#cpuHealth::-webkit-progress-bar, #playerHealth::-webkit-progress-bar {
+    border: 2px solid var(--DARKEST);
+    border-radius: 40px;
+    background-color: var(--LIGHTEST);
+}
+
+#cpuHealth::-webkit-progress-value {
+    border-radius: 40px;
+    background-color: coral;
+}
+
+#playerHealth::-webkit-progress-value {
+    border-radius: 40px;
+    background-color: rgb(24, 174, 24);
+}
+
+.cpuArea {
+    display: flex;
+    justify-content: center;
+}
+
+.cpuHand {
+    margin: 25px 0 25px 0;
+    background-color: var(--BLUE);
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    width: 340px;
+    height: 160px;
+}
+
+.playerArea {
+    display: flex;
+    justify-content: center;
+}
+
+.playerHand {
+    margin: 25px 0 25px 0;
+    background-color: var(--BLUE);
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    width: 340px;
+    height: 160px;
+}
+
 #newDeck, #drawCard {
     background-image: url("https://www.deckofcardsapi.com/static/img/back.png");
     background-size: cover;
@@ -84,23 +141,7 @@ h1 {
     filter: brightness(90%);
 }
 
-.playerArea {
-    display: flex;
-    justify-content: center;
-}
 
-.playerHand {
-    margin: 50px 0;
-    background-color: var(--BLUE);
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px;
-    border-radius: 15px;
-    width: 340px;
-    height: 160px;
-}
 
 .card {
     display: block;
@@ -111,6 +152,9 @@ h1 {
     filter: brightness(90%);
 }
 
+.dragging {
+    opacity: 50%;
+}
 
 
 

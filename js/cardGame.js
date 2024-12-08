@@ -2,25 +2,36 @@ let gameState = "play";
 let deckId;
 let cardsRemaining;
 let discardPile = 0;
+let cpuHealth = 100;
 
 const infoDeck = document.querySelector("#infoDeck");
 const infoCardsRemaining = document.querySelector("#infoCardsRemaining");
 const infoDiscardPile = document.querySelector("#infoDiscardPile");
 
+const cpuHealthBar = document.querySelector("#cpuHealth");
+
 const newDeckBtn = document.getElementById("newDeck");
 const drawCardBtn = document.getElementById("drawCard");
 const playerHand = document.querySelector(".playerHand");
+const cpuHand = document.querySelector(".cpuHand");
 
 newDeckBtn.addEventListener("click", createNewDeck);
 drawCardBtn.addEventListener("click", drawCard);
 
+/* adding dragover event to the hp bars */
+cpuHand.addEventListener("dragover", () => {
+    cardBeingDragged = document.querySelector(".dragging");
+    cardBeingDragged.target = "cpu";
+});
+
 
 class Card {
-    constructor(code, image, value, suit) {
+    constructor(code, image, value, suit, target = "cpu") {
         this.code = code;
         this.image = image;
         this.value = value;
         this.suit = suit;
+        this.target = target;
     }
 
     createElement() {
@@ -28,11 +39,25 @@ class Card {
         newCard.dataset.code = this.code;
         newCard.dataset.value = this.value;
         newCard.dataset.suit = this.suit;
+        newCard.draggable = true;
 
         const newCardImage = document.createElement("IMG");
         newCardImage.src = this.image;
         newCardImage.classList.add("card");
         newCard.appendChild(newCardImage);
+
+        /* Add event listeners */
+        newCard.addEventListener("dragstart", () => {
+            newCardImage.classList.add("dragging");
+        });
+        newCard.addEventListener("dragend", () => {
+            newCardImage.classList.remove("dragging");
+            if(this.target === "cpu"){
+                cpuHealth -= this.value;
+                displayCpuHealth();
+                console.log(cpuHealth);
+            }
+        });
   
         return newCard;
     }
@@ -68,6 +93,7 @@ async function drawCard() {
 function createCard(code, image, value, suit) {
     const newCard = new Card(code, image, value, suit).createElement();
     newCard.addEventListener("click", discardCard);
+
     playerHand.appendChild(newCard);
 }
 
@@ -84,3 +110,9 @@ function discardCard() {
     updateDiscardPile();
     this.remove();
 }
+
+function displayCpuHealth() {
+     cpuHealthBar.value = cpuHealth;
+}
+
+displayCpuHealth();
