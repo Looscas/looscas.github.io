@@ -1,6 +1,6 @@
 let gameState = "play";
-let deckId;
-let cardsRemaining;
+let deckId = "r67zmtbj7tvj";
+let cardsRemaining = 52;
 let discardPile = 0;
 let cpuHealth = 100;
 

@@ -149,7 +149,9 @@ h1 {
 }
 
 .card:hover {
-    filter: brightness(90%);
+    outline: 3px solid red;
+    border-radius: 10px;
+    
 }
 
 .dragging {
@@ -186,10 +188,10 @@ h1 {
 
 @media screen and (max-width: 460px) {
     body {
-        padding-top: 100px;
+        padding-top: 50px;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
